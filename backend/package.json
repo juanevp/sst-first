@@ -1,0 +1,14 @@
+{
+  "name": "@my-sst-app/backend",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {},
+  "dependencies": {
+    "aws-sdk": "^2.1140.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.97",
+    "@types/uuid": "^8.3.4"
+  }
+}

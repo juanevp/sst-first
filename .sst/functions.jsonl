@@ -1,0 +1,5 @@
+{"id":"dev-sst-first-api-Api-Lambda_POST_-notes","handler":"functions/create.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"C:\\Temp\\sst-first"}
+{"id":"dev-sst-first-api-Api-Lambda_GET_-notes-{id}","handler":"functions/get.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"C:\\Temp\\sst-first"}
+{"id":"dev-sst-first-api-Api-Lambda_GET_-notes","handler":"functions/list.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"C:\\Temp\\sst-first"}
+{"id":"dev-sst-first-api-Api-Lambda_PUT_-notes-{id}","handler":"functions/update.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"C:\\Temp\\sst-first"}
+{"id":"dev-sst-first-api-Api-Lambda_DELETE_-notes-{id}","handler":"functions/delete.main","runtime":"nodejs16.x","srcPath":"backend","bundle":{"format":"esm"},"root":"C:\\Temp\\sst-first"}

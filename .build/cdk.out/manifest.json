@@ -1,0 +1,841 @@
+{
+  "version": "18.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "dev-sst-first-storage.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "dev-sst-first-storage.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "dev-sst-first-storage": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://260867675774/us-east-1",
+      "properties": {
+        "templateFile": "dev-sst-first-storage.template.json",
+        "tags": {
+          "sst:app": "sst-first",
+          "sst:stage": "dev"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::260867675774:role/cdk-hnb659fds-deploy-role-260867675774-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::260867675774:role/cdk-hnb659fds-cfn-exec-role-260867675774-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-260867675774-us-east-1/b58ed31115a58d5d83dfb4f8c61cc5774c4b1f6a929417c784c70a9c184bd206.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "dev-sst-first-storage.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::260867675774:role/cdk-hnb659fds-lookup-role-260867675774-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "dev-sst-first-storage.assets"
+      ],
+      "metadata": {
+        "/dev-sst-first-storage": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "sst:app",
+                "Value": "sst-first"
+              },
+              {
+                "Key": "sst:stage",
+                "Value": "dev"
+              }
+            ]
+          }
+        ],
+        "/dev-sst-first-storage/SSTMetadata": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSTMetadata"
+          }
+        ],
+        "/dev-sst-first-storage/Notes/Table": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "NotesTable7100B0E8"
+            }
+          }
+        ],
+        "/dev-sst-first-storage/Notes/Table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotesTable7100B0E8"
+          }
+        ],
+        "/dev-sst-first-storage/Uploads/Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UploadsBucketC4B27CC7"
+          }
+        ],
+        "/dev-sst-first-storage/Exports/Output{\"Fn::GetAtt\":[\"NotesTable7100B0E8\",\"Arn\"]}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputFnGetAttNotesTable7100B0E8Arn5DD5BF38"
+          }
+        ],
+        "/dev-sst-first-storage/Exports/Output{\"Ref\":\"NotesTable7100B0E8\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefNotesTable7100B0E8C879CB95"
+          }
+        ],
+        "/dev-sst-first-storage/Exports/Output{\"Fn::GetAtt\":[\"UploadsBucketC4B27CC7\",\"Arn\"]}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputFnGetAttUploadsBucketC4B27CC7Arn515ECA45"
+          }
+        ],
+        "/dev-sst-first-storage/Exports/Output{\"Ref\":\"UploadsBucketC4B27CC7\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefUploadsBucketC4B27CC7CCC94A6B"
+          }
+        ],
+        "/dev-sst-first-storage/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/dev-sst-first-storage/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "dev-sst-first-storage"
+    },
+    "dev-sst-first-api.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "dev-sst-first-api.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "dev-sst-first-api": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://260867675774/us-east-1",
+      "properties": {
+        "templateFile": "dev-sst-first-api.template.json",
+        "tags": {
+          "sst:app": "sst-first",
+          "sst:stage": "dev"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::260867675774:role/cdk-hnb659fds-deploy-role-260867675774-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::260867675774:role/cdk-hnb659fds-cfn-exec-role-260867675774-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-260867675774-us-east-1/b2c119ae605d1286f38b4060de1c5256ff0d584016b8867c0e8a405b5a9415d3.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "dev-sst-first-api.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::260867675774:role/cdk-hnb659fds-lookup-role-260867675774-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "dev-sst-first-storage",
+        "dev-sst-first-api.assets"
+      ],
+      "metadata": {
+        "/dev-sst-first-api": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "sst:app",
+                "Value": "sst-first"
+              },
+              {
+                "Key": "sst:stage",
+                "Value": "dev"
+              }
+            ]
+          }
+        ],
+        "/dev-sst-first-api/SSTMetadata": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSTMetadata"
+          }
+        ],
+        "/dev-sst-first-api/Api/Api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiCD79AAA0"
+          }
+        ],
+        "/dev-sst-first-api/Api/Api/DefaultStage/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiDefaultStage1AAE989B"
+          }
+        ],
+        "/dev-sst-first-api/Api/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLogGroup1717FE17"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_POST_--notes/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPOSTnotesServiceRoleD16681D3"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_POST_--notes/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPOSTnotesServiceRoleDefaultPolicy6D85CF6B"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_POST_--notes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPOSTnotes3B067E1B"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_POST_--notes/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPOSTnotesEventInvokeConfig78ADA2E8"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_POST_--notes/Integration_POST_--notes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePOSTnotesIntegrationPOSTnotes44F9E77C"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_POST_--notes/Integration_POST_--notes-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePOSTnotesIntegrationPOSTnotesPermission83B10601"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_POST_--notes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePOSTnotes66667A1D"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_GET_--notes--{id}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesidServiceRole5ED71CA8"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_GET_--notes--{id}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesidServiceRoleDefaultPolicy0BDDFC9B"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_GET_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesidBDFD7F2C"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_GET_--notes--{id}/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesidEventInvokeConfig638AD083"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_GET_--notes--{id}/Integration_GET_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETnotesidIntegrationGETnotesidDDEC4C94"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_GET_--notes--{id}/Integration_GET_--notes--{id}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETnotesidIntegrationGETnotesidPermissionC332DC73"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_GET_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETnotesid7B39CB5A"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_GET_--notes/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesServiceRoleFAD2F768"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_GET_--notes/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesServiceRoleDefaultPolicy46521967"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_GET_--notes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesA3E56CF7"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_GET_--notes/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaGETnotesEventInvokeConfigE155863D"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_GET_--notes/Integration_GET_--notes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETnotesIntegrationGETnotes809882CF"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_GET_--notes/Integration_GET_--notes-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETnotesIntegrationGETnotesPermissionA18F8817"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_GET_--notes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteGETnotesBFEE3C9D"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_PUT_--notes--{id}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPUTnotesidServiceRole7A962796"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_PUT_--notes--{id}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPUTnotesidServiceRoleDefaultPolicyB3FF9AED"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_PUT_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPUTnotesid28D10C39"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_PUT_--notes--{id}/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaPUTnotesidEventInvokeConfig80B67243"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_PUT_--notes--{id}/Integration_PUT_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePUTnotesidIntegrationPUTnotesid0B48B9D7"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_PUT_--notes--{id}/Integration_PUT_--notes--{id}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePUTnotesidIntegrationPUTnotesidPermissionDD71990C"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_PUT_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRoutePUTnotesidFAE087B0"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_DELETE_--notes--{id}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaDELETEnotesidServiceRole196EBA58"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_DELETE_--notes--{id}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaDELETEnotesidServiceRoleDefaultPolicy451F8A74"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_DELETE_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaDELETEnotesid69A96EAD"
+          }
+        ],
+        "/dev-sst-first-api/Api/Lambda_DELETE_--notes--{id}/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiLambdaDELETEnotesidEventInvokeConfigC7520EFE"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_DELETE_--notes--{id}/Integration_DELETE_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteDELETEnotesidIntegrationDELETEnotesidE2F04DD5"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_DELETE_--notes--{id}/Integration_DELETE_--notes--{id}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteDELETEnotesidIntegrationDELETEnotesidPermission717CBC89"
+          }
+        ],
+        "/dev-sst-first-api/Api/Route_DELETE_--notes--{id}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiRouteDELETEnotesidCFA3191E"
+          }
+        ],
+        "/dev-sst-first-api/ApiEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiEndpoint"
+          }
+        ],
+        "/dev-sst-first-api/Exports/Output{\"Ref\":\"ApiCD79AAA0\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefApiCD79AAA0A1504A18"
+          }
+        ],
+        "/dev-sst-first-api/Exports/Output{\"Fn::GetAtt\":[\"ApiCD79AAA0\",\"ApiEndpoint\"]}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputFnGetAttApiCD79AAA0ApiEndpoint389C4905"
+          }
+        ],
+        "/dev-sst-first-api/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/dev-sst-first-api/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "dev-sst-first-api"
+    },
+    "dev-sst-first-auth.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "dev-sst-first-auth.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "dev-sst-first-auth": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://260867675774/us-east-1",
+      "properties": {
+        "templateFile": "dev-sst-first-auth.template.json",
+        "tags": {
+          "sst:app": "sst-first",
+          "sst:stage": "dev"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::260867675774:role/cdk-hnb659fds-deploy-role-260867675774-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::260867675774:role/cdk-hnb659fds-cfn-exec-role-260867675774-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-260867675774-us-east-1/3e501cab4bf639d26cd0b96bb5b01a4003b6b7a76c509bc96a2077d1b62eb77b.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "dev-sst-first-auth.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::260867675774:role/cdk-hnb659fds-lookup-role-260867675774-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "dev-sst-first-api",
+        "dev-sst-first-storage",
+        "dev-sst-first-auth.assets"
+      ],
+      "metadata": {
+        "/dev-sst-first-auth": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "sst:app",
+                "Value": "sst-first"
+              },
+              {
+                "Key": "sst:stage",
+                "Value": "dev"
+              }
+            ]
+          }
+        ],
+        "/dev-sst-first-auth/SSTMetadata": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSTMetadata"
+          }
+        ],
+        "/dev-sst-first-auth/Auth/UserPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthUserPool8115E87F"
+          }
+        ],
+        "/dev-sst-first-auth/Auth/UserPoolClient/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthUserPoolClient0AA456E4"
+          }
+        ],
+        "/dev-sst-first-auth/Auth/IdentityPool": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthIdentityPool12DFB5E1"
+          }
+        ],
+        "/dev-sst-first-auth/Auth/IdentityPoolAuthRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthIdentityPoolAuthRoleD14DA003"
+          }
+        ],
+        "/dev-sst-first-auth/Auth/IdentityPoolAuthRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthIdentityPoolAuthRoleDefaultPolicy32D17CAC"
+          }
+        ],
+        "/dev-sst-first-auth/Auth/IdentityPoolUnauthRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthIdentityPoolUnauthRoleA8DE48F3"
+          }
+        ],
+        "/dev-sst-first-auth/Auth/IdentityPoolUnauthRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthIdentityPoolUnauthRoleDefaultPolicy0417F857"
+          }
+        ],
+        "/dev-sst-first-auth/Auth/IdentityPoolRoleAttachment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthIdentityPoolRoleAttachmentB0D3DC72"
+          }
+        ],
+        "/dev-sst-first-auth/Region": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Region"
+          }
+        ],
+        "/dev-sst-first-auth/UserPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserPoolId"
+          }
+        ],
+        "/dev-sst-first-auth/IdentityPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IdentityPoolId"
+          }
+        ],
+        "/dev-sst-first-auth/UserPoolClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UserPoolClientId"
+          }
+        ],
+        "/dev-sst-first-auth/Exports/Output{\"Ref\":\"AuthUserPool8115E87F\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefAuthUserPool8115E87F4F9C6D4C"
+          }
+        ],
+        "/dev-sst-first-auth/Exports/Output{\"Ref\":\"AuthIdentityPool12DFB5E1\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefAuthIdentityPool12DFB5E192D02E93"
+          }
+        ],
+        "/dev-sst-first-auth/Exports/Output{\"Ref\":\"AuthUserPoolClient0AA456E4\"}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExportsOutputRefAuthUserPoolClient0AA456E49BCE9731"
+          }
+        ],
+        "/dev-sst-first-auth/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/dev-sst-first-auth/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "dev-sst-first-auth"
+    },
+    "dev-sst-first-FrontendStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "dev-sst-first-FrontendStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "dev-sst-first-FrontendStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://260867675774/us-east-1",
+      "properties": {
+        "templateFile": "dev-sst-first-FrontendStack.template.json",
+        "tags": {
+          "sst:app": "sst-first",
+          "sst:stage": "dev"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::260867675774:role/cdk-hnb659fds-deploy-role-260867675774-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::260867675774:role/cdk-hnb659fds-cfn-exec-role-260867675774-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-260867675774-us-east-1/f3083d2a79c5b8c7ffe278d6278e8ea09cf51fa9e2341f0094ee0bc6598ffc99.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "dev-sst-first-FrontendStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::260867675774:role/cdk-hnb659fds-lookup-role-260867675774-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "dev-sst-first-api",
+        "dev-sst-first-storage",
+        "dev-sst-first-auth",
+        "dev-sst-first-FrontendStack.assets"
+      ],
+      "metadata": {
+        "/dev-sst-first-FrontendStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "sst:app",
+                "Value": "sst-first"
+              },
+              {
+                "Key": "sst:stage",
+                "Value": "dev"
+              }
+            ]
+          }
+        ],
+        "/dev-sst-first-FrontendStack/SSTMetadata": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSTMetadata"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteAwsCliLayer032ED8F7"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/SstSiteEnv_REACT_APP_API_URL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteSstSiteEnvREACTAPPAPIURL2A01004D"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/SstSiteEnv_REACT_APP_REGION": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteSstSiteEnvREACTAPPREGIONBBB67CDE"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/SstSiteEnv_REACT_APP_BUCKET": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteSstSiteEnvREACTAPPBUCKETB63B1A97"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/SstSiteEnv_REACT_APP_USER_POOL_ID": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteSstSiteEnvREACTAPPUSERPOOLID08C215DE"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/SstSiteEnv_REACT_APP_IDENTITY_POOL_ID": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteSstSiteEnvREACTAPPIDENTITYPOOLIDD9D34008"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/SstSiteEnv_REACT_APP_USER_POOL_CLIENT_ID": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteSstSiteEnvREACTAPPUSERPOOLCLIENTID68892D5A"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/S3Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteS3BucketB9BB7C04"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/S3Bucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteS3BucketPolicyD88B458D"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/S3Bucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteS3BucketAutoDeleteObjectsCustomResource20A5650F"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/S3Uploader/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteS3UploaderServiceRoleEA10A23A"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/S3Uploader/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteS3UploaderServiceRoleDefaultPolicy2FE62292"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/S3Uploader/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteS3Uploader4099484B"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/S3Handler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteS3HandlerServiceRoleB1C8F614"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/S3Handler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteS3HandlerServiceRoleDefaultPolicy50C54561"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/S3Handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteS3HandlerE190AB4B"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/S3Deployment/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteS3Deployment8044D733"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/Distribution/Origin1/S3Origin/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteDistributionOrigin1S3OriginE341B3F7"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/Distribution/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteDistributionFFB1766B"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/CloudFrontInvalidator/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteCloudFrontInvalidatorServiceRole0398B530"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/CloudFrontInvalidator/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteCloudFrontInvalidatorServiceRoleDefaultPolicyB61C59B5"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/CloudFrontInvalidator/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteCloudFrontInvalidator335AA9F4"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/ReactSite/CloudFrontInvalidation/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ReactSiteCloudFrontInvalidationFEE26148"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/SiteUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SiteUrl"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/dev-sst-first-FrontendStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "dev-sst-first-FrontendStack"
+    }
+  }
+}

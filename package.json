@@ -1,0 +1,34 @@
+{
+  "name": "sst-first",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "withdevenv": "env-cmd -e dev env-cmd -e dev -r ./.env-cmdrc.local",
+    "withstagingenv": "env-cmd -e staging env-cmd -e staging -r ./.env-cmdrc.local",
+    "withprodenv": "env-cmd -e prod env-cmd -e prod -r ./.env-cmdrc.local",
+    "start": "npm run withdevenv -- sst start --stage dev",
+    "build": "npm run withdevenv -- sst build --stage dev",
+    "deploy": "npm run withdevenv -- sst deploy --stage dev",
+    "deploy:staging": "npm run withstagingenv -- sst deploy --stage staging",
+    "deploy:prod": "npm run withprodenv -- sst deploy --stage prod",
+    "remove": "npm run withdevenv -- sst remove --stage dev",
+    "remove:staging": "npm run withstagingenv -- sst remove --stage staging",
+    "console": "npm run withdevenv -- sst console --stage dev",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "testenv": "npm run withstagingenv -- \"echo ${AWS_PROFILE} ${STAGE}\""
+  },
+  "devDependencies": {
+    "@serverless-stack/cli": "^1.1.2",
+    "@serverless-stack/resources": "^1.1.2",
+    "@tsconfig/node16": "^1.0.2",
+    "cross-env": "^7.0.3",
+    "env-cmd": "^10.1.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4",
+    "vitest": "^0.12.6"
+  },
+  "workspaces": [
+    "backend"
+  ]
+}
