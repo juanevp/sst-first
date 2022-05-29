@@ -16,6 +16,7 @@ const config = {
     },
     MAX_ATTACHMENT_SIZE: 5000000,
     STRIPE_KEY: "YOUR_STRIPE_PUBLIC_KEY",
+    SENTRY_DSN: "https://e5f576e45c3845fea8cfec262be44f97@o1266236.ingest.sentry.io/6450818"
 };
 
 export default config;
