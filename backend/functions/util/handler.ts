@@ -1,5 +1,7 @@
 import { APIGatewayEventRequestContextV2WithAuthorizer, APIGatewayProxyEventV2WithRequestContext, APIGatewayProxyResultV2, Context, Handler } from "aws-lambda";
 
+import * as debug from "./debug";
+
 export type APIGatewayProxyEventV2 = APIGatewayProxyEventV2WithRequestContext<APIGatewayEventRequestContextV2WithAuthorizer<any>>;
 export type APIGatewayProxyHandlerV2<T = never> = Handler<APIGatewayProxyEventV2, APIGatewayProxyResultV2<T>>;
 
@@ -7,12 +9,15 @@ export default function handler(lambda: (event: APIGatewayProxyEventV2, context:
   const fn: APIGatewayProxyHandlerV2 = async (event, context) => {
     let body, statusCode;
 
+    debug.init(event);
     try {
       // Run the Lambda
       body = await lambda(event, context);
       statusCode = 200;
     } catch (e: any) {
-      console.error(e);
+      // Print debug messages
+      debug.flush(e);
+      
       body = { error: e.message };
       statusCode = 500;
     }

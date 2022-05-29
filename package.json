@@ -13,6 +13,7 @@
     "deploy:prod": "npm run withprodenv -- sst deploy --stage prod",
     "remove": "npm run withdevenv -- sst remove --stage dev",
     "remove:staging": "npm run withstagingenv -- sst remove --stage staging",
+    "removeall": "npm run withdevenv -- cross-env DELETE_RESOURCES=true sst remove --stage dev",
     "console": "npm run withdevenv -- sst console --stage dev",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -30,5 +31,8 @@
   },
   "workspaces": [
     "backend"
-  ]
+  ],
+  "dependencies": {
+    "aws-cdk-lib": "2.24.0"
+  }
 }
