@@ -13,8 +13,8 @@ node_modules
 .DS_Store
 
 # sst build output
-.build
-.sst
+/.build
+/.sst
 
 # environments
 .env*.local

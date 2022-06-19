@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../../backend/functions/lambda.ts"],
-  "sourcesContent": ["import { APIGatewayProxyHandlerV2 } from \"aws-lambda\";\n\nexport const handler: APIGatewayProxyHandlerV2 = async (event) => {\n  return {\n    statusCode: 200,\n    headers: { \"Content-Type\": \"text/plain\" },\n    body: `Hello, World! Your request was received at ${event.requestContext.time}.`,\n  };\n};\n"],
-  "mappings": ";;;AAEO,IAAM,UAAoC,OAAO,UAAU;AAChE,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,SAAS,EAAE,gBAAgB;AAAA,IAC3B,MAAM,8CAA8C,MAAM,eAAe;AAAA;AAAA;",
-  "names": []
-}
